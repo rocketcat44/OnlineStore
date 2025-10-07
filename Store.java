@@ -34,20 +34,40 @@ public class Store
     profit = p;
   }
 
-  public ArrayList<ItemForSale> showItems(){
+
+  public String showItems() {
+    String s = "";
+    for (ItemForSale item : items) {
+      s += item.getName() + " by " + item.getCreator() + " ($" + item.getPrice() +") \n";
+    }
+    return s;
+  }
+
+
+  public void addItem(ItemForSale e) {
+    items.add(e);
+  }
+
+  public void sellItem(ItemForSale e) {
+    if (items.remove(e)) {
+      profit += e.getPrice();
+    }
+  }
+
+  public Double getProfit() {
+    return profit;
+  }
+
+  public void setProfit(Double profit) {
+    this.profit = profit;
+  }
+
+  public ArrayList<ItemForSale> getItems() {
     return items;
   }
 
-  public ItemForSale addItem(ItemForSale e){
-    items.add(e);
-    
-    return null;
+  public void setItems(ArrayList<ItemForSale> items) {
+    this.items = items;
+  }
   }
 
-  public ItemForSale sellItem(ItemForSale e){
-    items.remove(e);
-
-    return null;
-  }
-
-}
