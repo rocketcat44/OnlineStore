@@ -12,6 +12,9 @@ public class ItemForSale {
         this.dateOfSale = dateOfSale;
     }
 
+        // precondition for setters and getters:  object must exist
+    // postcondition for setters and getters: gets or sets the thingy
+
     public String getCreator() {
         return creator;
     }
@@ -44,6 +47,9 @@ public class ItemForSale {
         this.dateOfSale = dateOfSale;
     }
 
+
+    // precondition: creator is not null
+    // postcondition: returns the name of the creator
     public String creatorName() {
         return creator;
     }
