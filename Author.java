@@ -1,4 +1,5 @@
-
+// Bella
+// this file is for the author class
 public class Author {
     private String name;
     private String date;
@@ -8,6 +9,10 @@ public class Author {
         this.date = "";
     }
 
+    // precondition for setters and getters:  object must exist
+    // postcondition for setters and getters: gets or sets the thingy
+
+    
     public Author(String name, String date) {
         this.name = name;
         this.date = date;
@@ -20,7 +25,7 @@ public class Author {
     public void setName(String name) {
         this.name = name;
     }
-
+    
     public String getdate() {
         return date;
     }
