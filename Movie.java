@@ -12,6 +12,9 @@ public class Movie extends ItemForSale {
         this.duration = duration;
     }
 
+        // precondition for setters and getters:  object must exist
+    // postcondition for setters and getters: gets or sets the thingy
+
     public Double getDuration() {
         return duration;
     }
