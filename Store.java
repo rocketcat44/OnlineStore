@@ -35,6 +35,9 @@ public class Store
   }
 
 
+  // precondition: items isn't null
+// postcondition: all items in items is gonna be shown in the terminal
+
   public String showItems() {
     String s = "";
     for (ItemForSale item : items) {
@@ -43,10 +46,15 @@ public class Store
     return s;
   }
 
-
+  // precondition: items isn't at max capacity
+// postcondition: the targeted itme is gonna be added to items.
   public void addItem(ItemForSale e) {
     items.add(e);
   }
+
+
+  //precondition: e is in items
+  // post condition: e is no longer gonna be in items
 
   public void sellItem(ItemForSale e) {
     if (items.remove(e)) {
