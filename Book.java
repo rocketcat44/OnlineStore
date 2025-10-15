@@ -16,6 +16,9 @@ public class Book extends ItemForSale {
         this.auth = author;
     }
 
+        // precondition for setters and getters:  object must exist
+    // postcondition for setters and getters: gets or sets the thingy
+
     public String getPublisher() {
         return publisher;
     }
